@@ -1,0 +1,68 @@
+
+@mixin home($minwid,$flexf,$martop,$marleft,$hmartop,$hfonsize,$marr) {
+    width: $minwid;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: $flexf;
+    background-color: #49757f;
+    img{
+        margin-top: $martop;
+        border: 1px solid black;
+        width: 350px;
+        border-radius: 60%;
+        margin-left: $marleft;
+    }
+    .hgrup{
+        margin-top: $hmartop;
+        flex: 1;
+        text-align:center;
+        font-size: $hfonsize;
+        width: 100%;
+        margin-right: $marr;
+        h1,h3{
+            color: rgb(207, 207, 187);
+        }
+    }
+}
+
+
+
+// here begins the media query
+
+@media only screen and (max-width:599px){
+    .home{
+        @include home(599px,column,10%,initial,2%,20px,initial);
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:767px){
+    .home{
+        @include home(100%,column,10%,initial,2%,20px,initial);
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+    .home{
+        @include home(100%,column,6%,initial,2%,20px,initial);
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+    .home{
+        @include home(100%,column,6%,initial,2%,20px,initial);
+    }
+}
+
+@media only screen and (min-width:1200px){    
+    .home{
+        @include home(100%,initial,initial,20%,initial,33px,5%);
+    }
+}
+
+@media only screen and (min-width:1400px){    
+    .home{
+        @include home(100%,initial,initial,25%,initial,33px,5%);
+    }
+}

@@ -1,0 +1,62 @@
+@mixin projects($wid,$pad,$hfz,$cpwid,$cphe,$cfd,$cai,$cjc) {
+    width: $wid;
+    height: 80vh;
+    background: linear-gradient(to bottom, black,#49757f);
+    padding-top: $pad;
+    h1{
+        color: rgb(207, 207, 187);
+        text-align: center;
+        font-size: $hfz;
+        width: 80%;
+        margin: auto;
+    }
+    .contain__proj{
+        // border: 1px solid white;
+        width: $cpwid;
+        height: $cphe;
+        margin: auto;
+        display: flex;
+        flex-direction: $cfd;
+        align-items: $cai;
+        justify-content:$cjc;
+        .proj1{
+            width: 300px;
+            height: 300px;
+            background-image: url('Pro1.JPG');
+            background-size:contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:599px){
+    .projects{
+        @include projects(599px,15%,45px,100%,90%,column,center,center);
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .projects{
+        @include projects(100%,15%,5vw,100%,90%,column,center,center);
+    }
+}
+
+@media only screen and (min-width:768px){
+    .projects{
+        @include projects(100%,initial,5vw,80%,100%,column,center,center);
+    }
+}
+
+@media only screen and (min-width:992px){
+    .projects{
+        @include projects(100%,initial,5vw,80%,80%,column,center,center);
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .projects{
+        @include projects(100%,7%,5vw,80%,87%,column,initial,center);    
+    }
+}

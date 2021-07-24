@@ -1,0 +1,45 @@
+@mixin contact($wid) {
+    .contact{    
+        width: $wid;
+        height: 5vh;
+        padding-top: 5px;
+        background-color:rgb(207, 207, 187);
+        display: flex;
+        justify-content: center;
+    
+        div{
+            width: 40px;
+            margin-right: 5px;
+            margin-top: 2px;
+        }
+    }
+    #rigths{
+        width: $wid;
+        background-color:rgb(207, 207, 187);
+        text-align: center;
+        align-self: center;
+    }    
+}
+
+
+
+
+@media only screen and (max-width:599px){
+    @include contact(599px);
+}
+
+@media only screen and (min-width:600px){
+    @include contact(100%);
+}
+
+@media only screen and (min-width:768px){
+    @include contact(100%);
+}
+
+@media only screen and (min-width:992px){
+    @include contact(100%);
+}
+
+@media screen and (min-width:1200px){
+    @include contact(100%);
+}

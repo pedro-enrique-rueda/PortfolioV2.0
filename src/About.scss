@@ -1,0 +1,114 @@
+@mixin about($heigh,$cwid,$hefz,$hfz,$pfz,$cvmt,$htecfz,$skml,$skwid,$imskwid) {
+    width: $cwid;
+    height: $heigh;
+    background-color: black;
+    color: white;
+    .header{
+        // border: 1px solid white;
+        width: 80%;
+        height: 15%;
+        margin: auto;
+        font-size: $hefz;
+        text-align: center;
+        padding-top: 5%;
+        color: rgb(207, 207, 187);
+    }
+    .cont2{
+        display: flex;
+        height: 84%;
+        .about__info{
+            width: 40%;
+            height: 750px;
+            margin-left: 10%;
+            h1{
+                color: rgba($color: white, $alpha: 0.5);
+                text-align: center;
+                margin-top: 10px;
+                font-size: $hfz;
+            }
+            p{
+                text-align:left;
+                margin-top: 50px;
+                font-size: $pfz;
+            }
+            .CV{
+                text-align: center;
+                margin-top: $cvmt;
+                color: white;
+                font-size: 18px;
+                border-radius: 5px;
+                border:0;
+                background-color: rgb(60, 60, 255);
+                width: 150px;
+                height: 50px;
+            }
+        }
+        .about__techs{
+            width: 40%;
+            height: 750px;
+            margin-right: 10%;
+            text-align: center;
+            overflow: hidden;
+            overflow-y: auto;
+            h1{
+                margin-top: 10px;
+                color: rgba($color: white, $alpha: 0.5);
+                font-size: $htecfz;
+            }
+            .skills{
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                margin-top: 30px;
+                margin-left: $skml;
+                // vertical-align: middle;
+                width: $skwid;
+                // height: 12%;
+                height:$skwid;
+                float: left;
+                padding: 2%;
+                background-color: rgb(29, 27, 27);
+
+                img{
+                    width: $imskwid;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:599px){
+    .about{
+        @include about(80hv,599px,45px,25px,20px,25px,25px,20px,80px,70px);
+    }
+}
+
+@media only screen and (min-width:600px){
+    .about{
+        @include about(80hv,100%,5vw,4vw,20px,50px,4vw,20px,80px,70px);
+    }
+}
+
+@media only screen and (min-width:768px){
+    .about{
+        @include about(80hv,100%,5vw,4vw,20px,50px,4vw,20px,85px,75px);
+    }
+}
+
+@media only screen and (min-width:992px){
+    .about{
+        @include about(80hv,100%,5vw,3vw,20px,50px,2.1vw,30px,90px,80px);
+    }
+}
+
+@media screen and (min-width:1200px){
+    .about{
+        @include about(93hv,100%,5vw,3vw,25px,50px,2.1vw,30px,100px,90px);
+    }
+}
